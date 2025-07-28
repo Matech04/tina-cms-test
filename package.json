@@ -3,12 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "TINA_PUBLIC_IS_LOCAL=true tinacms dev -c 'eleventy --input='site' --serve --port $PORT' ",
-    "dev:prod": "TINA_PUBLIC_IS_LOCAL=false tinacms dev -c 'eleventy --input='site' --serve'",
-    "build": "tinacms build --verbose && eleventy --input='site'",
+    "dev": "tinacms dev -c \"astro dev\"",
+    "build": "tinacms build -c \"astro build\"",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
+    "astro": "^5.12.3",
     "@tinacms/cli": "^1.5.34",
     "@tinacms/datalayer": "^1.2.29",
     "cookie-parser": "^1.4.6",
